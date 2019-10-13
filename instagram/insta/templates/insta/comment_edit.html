@@ -1,0 +1,15 @@
+{% extends "insta/base.html" %}
+
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="form-group">
+    {{ form.as_p }}
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success float-right ml-2">댓글 수정</button>
+    <a type="submit" class="btn btn-danger float-right" href="{% url 'main' %}">취소</a>
+  </div>
+</form>
+
+{% endblock content %}
